@@ -1,4 +1,3 @@
-// See [Project Structure](../../../README.md#project-structure)
 import { describe, expect, it } from "vitest";
 
 import { handler } from "./index";

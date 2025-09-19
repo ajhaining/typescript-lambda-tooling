@@ -8,7 +8,7 @@ export default defineConfig({
         "node_modules/**",
         "dist/**",
         "tests/**",
-        "**/*.test.*",
+        "**/*.{test,spec}.*",
         "**/*.config.*",
         "**/*.d.ts",
       ],
@@ -22,5 +22,6 @@ export default defineConfig({
       },
     },
     globals: true,
+    include: ["tests/**", "**/*.{test,spec}.*"],
   },
 });

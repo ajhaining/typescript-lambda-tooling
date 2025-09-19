@@ -1,4 +1,3 @@
-// See [Project Structure](../../../README.md#project-structure)
 import type { APIGatewayProxyResult } from "aws-lambda";
 
 export function handler(): Promise<APIGatewayProxyResult> {
