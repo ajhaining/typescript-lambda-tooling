@@ -1,0 +1,2 @@
+# See [Project Structure](../../README.md#project-structure)
+npx lint-staged

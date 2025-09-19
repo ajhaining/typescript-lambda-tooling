@@ -1,0 +1,11 @@
+# Dependabot configuration - see README.md#dependabot for details
+version: 2
+
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    commit-message:
+      prefix: "chore(deps)"
+      include: "scope"

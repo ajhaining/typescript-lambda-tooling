@@ -1,0 +1,43 @@
+{
+  "name": "typescript-lambda-tooling",
+  "version": "0.0.1",
+  "description": "Production-ready TypeScript starter for AWS Lambda functions with modern development workflow",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "npm run clean && npx esbuild src/functions/*/index.ts --bundle --platform=node --target=node22 --format=esm --out-extension:.js=.mjs --minify --sourcemap --outdir=dist --outbase=src --external:@aws-sdk/* --tree-shaking=true",
+    "clean": "rm -rf dist",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "lint": "eslint . --ext .ts,.js",
+    "lint:fix": "eslint . --ext .ts,.js --fix",
+    "prepare": "husky",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui",
+    "test:watch": "vitest --watch"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@eslint/js": "^9.35.0",
+    "@types/aws-lambda": "^8.10.152",
+    "@vitest/coverage-v8": "^3.2.4",
+    "@vitest/ui": "^3.2.4",
+    "esbuild": "^0.25.10",
+    "eslint": "^9.35.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-perfectionist": "^4.15.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.6",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.44.0",
+    "vitest": "^3.2.4"
+  },
+  "volta": {
+    "node": "22.19.0",
+    "npm": "11.6.0"
+  }
+}

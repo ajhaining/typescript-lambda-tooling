@@ -1,0 +1,26 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "eslint.rules.customizations": [
+    {
+      "fixable": true,
+      "rule": "perfectionist/*",
+      "severity": "off"
+    }
+  ],
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "*.js": "$(capture).js.map, $(capture).*.js, $(capture)_*.js",
+    "*.ts": "$(capture).*.ts, $(capture)_*.ts",
+    "package.json": ".editorconfig, .npm*, .prettier*, .releaserc*, .vscode*, commitlint*, eslint*, lint-staged*, package-lock.json, prettier*",
+    "README*": "CHANGELOG*, CODEOWNERS, CONTRIBUTING*, GOVERNANCE.MD, LICENSE*, RELEASE_NOTES*, SECURITY.MD"
+  },
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.preferences.includePackageJsonAutoImports": "on",
+  "typescript.suggest.autoImports": true,
+  "typescript.updateImportsOnFileMove.enabled": "always"
+}
